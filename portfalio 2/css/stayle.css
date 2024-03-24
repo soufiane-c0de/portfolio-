@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+
+}
+
+ ul a {
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin-left:480px ; 
+}
+
+strong {
+    color: red;
+}
+
+.nav-logo {
+    padding-left: 20px;
+    margin-right: auto;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: xx-large;
+    font-size: 3em;
+}
+
+
+.nav-btn {
+    margin: 15px;
+    text-align: center;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+    transition: color 0.3s, border-bottom-width 0.3s;
+}
+
+.nav-btn:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s, left 0.3s;/
+}
+
+.nav-btn:hover {
+    color: red;
+}
+
+.nav-btn:hover:after {
+    width: calc(100% - 7px);
+    left: 10px;
+}
+
+
+.main {
+    display: block;
+
+
+}
+
+.main-img {
+    float: right;
+    background-attachment: fixed;
+
+}
+
+.main-text {
+    color: white;
+    font-weight: 900;
+    font-size: 2.8em;
+
+}
+
+.icons {
+    color: white;
+    font-size: xx-large;
+    padding-right: 20px;
+}
+
+.icons:hover {
+    transform: translateY(-5px);
+}
+
+#about {
+    padding: 150px;
+}
+
+.about-text {
+    padding-bottom: 40px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.about-btn {
+    display: block;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 90px;
+    padding: 10px;
+}
+
+.daw {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: white;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.skill-level_100 {
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    background-color: red;
+    animation: fill 2s ease-in-out forwards;
+}
+
+.skill-level_80 {
+    width: 80%;
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    background-color: red;
+    animation: fill 2s ease-in-out forwards;
+}
+
+.skill-level_60 {
+    width: 60%;
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    background-color: red;
+    animation: fill 2s ease-in-out forwards;
+}
+
+.skill-level {
+    height: 100%;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    background-color: red;
+    animation: fill 2s ease-in-out forwards;
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+}
+
+.skill-level .skill-level_100 {
+    width: 100%;
+}
+
+.skill-level .skill-level_80 {
+    width: 80%;
+}
+
+.skill-level .skill-level_60 {
+    width: 60%;
+}
+
+#projects {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.titel {
+    font-size: 3.4em;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #232323;
+    border-radius: 5px;
+}
+
+.slideshow {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.project-card a:hover {
+    background-color: red;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0px;
+    outline: none;
+    background-color: #232323;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px;
+}
+
+form button {
+    margin: 15px;
+    cursor: pointer;
+}
+
+textarea:focus,
+input:focus {
+    background-color: white;
+}
+
+footer {
+    background-color: #232323;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#contact {
+    margin: 170px 0 70px 0;
+
+}
+
+.sub-title {
+    font-size: 3.4em;
+    font-weight: bolder;
+    margin-bottom: 50px;
+}
+
+#msg {
+    color: green;
+    margin: 15px;
+    display: block;
+
+}
+
+.nav-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        background-color: #803939;
+        position: fixed;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav ul a {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul i {
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    .nav-icon {
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        right: -200px;
+    }
+    .nav-logo {
+        font-size: 2em;
+    }
+    .nav-btn {
+        margin: 10px 0;
+    }
+
+    .main {
+        text-align: center;
+    }
+
+    .main-img {
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    #about {
+        padding: 50px;
+    }
+
+    .about-text {
+        font-size: 1.2em;
+    }
+
+    .skill {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        background-color: #803939;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+
+    .nav-icon {
+        display: block;
+        font-size: 1.5em;
+    }
+
+
+    .nav-logo {
+        font-size: 2em;
+    }
+
+    .main-text {
+        font-size: 2em;
+    }
+
+    .icons {
+        font-size: 1.5em;
+    }
+
+    .sub-title {
+        font-size: 2.5em;
+    }
+
+    #contact {
+        margin: 100px 0 50px 0;
+    }
+}
