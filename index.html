@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/stayle.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,9 +24,8 @@
                     <a class="nav-btn" href="#about">About Me</a>
                     <a class="nav-btn" href="#projects">My Projrct</a>
                     <a class="nav-btn" href="#contact">Contact</a>
-                    <i class="fa-solid fa-xmark nav-icon text-light" onclick="openNav()"></i>
                 </ul>
-                <i class="fa-solid fa-bars nav-icon text-light" onclick="closeNav()"></i>
+                <i class="fa-solid fa-bars nav-icon text-light hamburger" onclick="openNav()"></i>
             </div>
         </div>
     </nav>
@@ -144,7 +142,7 @@
             <a href="project2.html" class="text-light btn btn-danger">Learn More</a>
         </div> -->
     </section>
-    <section class="container px-5" id="contact">
+    <section class="container" id="contact">
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title ">Contact Me</h1>
@@ -158,17 +156,11 @@
                 </div>
             </div>
             <div class="contact-right">
-                <form id="contactForm" action="https://formsubmit.co/soufiane.boughezroun@gmail.com" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                <form name="submit-to-google-sheet" class="contact-form"> <input type="text" name="Name"
+                        placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn-danger">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -180,7 +172,6 @@
     </footer>
     <script src="/js/bootstrap.js"></script>
     <script src="/js/script.js"></script>
-
 
 </body>
 

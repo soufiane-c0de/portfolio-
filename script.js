@@ -61,4 +61,66 @@ function sendEmail(e) {
 }
 
 // Add event listener to your form
-document.getElementById('contactForm').addEventListener('submit', sendEmail); 
+document.getElementById('contactForm').addEventListener('submit', sendEmail);
+
+// Mobile Menu Functionality
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeMenu = document.querySelector('.close-menu');
+
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+});
+
+closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+});
+
+// Close menu when clicking a link
+const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+});
+
+// Essential mobile menu functions
+function openNav() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Force solid background
+    mobileMenu.style.backgroundColor = '#000000';
+    mobileMenu.style.opacity = '1';
+}
+
+function closeNav() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Fix for mobile menu transparency
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    // Force opacity when scrolling (especially near projects section)
+    window.addEventListener('scroll', function() {
+        if (mobileMenu.classList.contains('active')) {
+            mobileMenu.style.backgroundColor = '#000000';
+            mobileMenu.style.opacity = '1';
+        }
+    });
+    
+    // Ensure menu is opaque when hamburger is clicked
+    document.querySelector('.hamburger')?.addEventListener('click', function() {
+        setTimeout(function() {
+            mobileMenu.style.backgroundColor = '#000000';
+            mobileMenu.style.opacity = '1';
+        }, 10);
+    });
+});
